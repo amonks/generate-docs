@@ -1,8 +1,8 @@
 # generate-docs
 
-function to generate markdown documentation from markdown comments.
+function to generate a documentation file from source files.
 
-any jsdoc-style comment (starts with `/**`) is treated as straight-up markdown.
+any jsdoc-style comment (starts with `/**`) is extracted and concatenated into the output file.
 
 example:
 
@@ -27,4 +27,3 @@ generateDocs({
 
 const add = (a, b) => a + b
 ```
-
