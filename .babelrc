@@ -1,5 +1,7 @@
 {
-  "presets": ["latest", "stage-1"],
-  "plugins": ["transform-runtime"]
+  "presets": [["env", {
+    "targets": {
+      node: true
+    }
+  }]]
 }
-
