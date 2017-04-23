@@ -10,12 +10,16 @@ const extractComments = str => {
     ([lines, inComment], line) => {
       if (inComment && line.trim() === '* @private')
         return [lines, false];
+
       if (inComment && line.trim() === '*/')
         return [[...lines, '', ''], false];
+
       if (!inComment && line.trim() === '/**')
         return [lines, true];
+
       if (inComment)
-        return [[...lines, line.slice(2).trim()], true];
+        return [[...lines, line.trim().slice(2)], true];
+
       return [lines, false];
     },
     [[], false]
