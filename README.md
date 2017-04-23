@@ -9,7 +9,7 @@ example:
 ```javascript
 // docs.js
 
-const generateDocs = require('generate-docs')
+const generateDocs = require('generate-docs').default
 
 generateDocs({
   paths: ['index.js'],
