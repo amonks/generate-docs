@@ -2,6 +2,8 @@
   "name": "generate-docs",
   "version": "1.0.1",
   "author": "Andrew J. Monks <a@monks.co>",
+  "repository": "amonks/generate-docs",
+  "homepage": "https://github.com/amonks/generate-docs",
   "license": "ISC",
   "files": [
     "lib"
@@ -11,6 +13,7 @@
   },
   "main": "lib/index.js",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.4.0"
   },
   "dependencies": {
