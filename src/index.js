@@ -31,8 +31,13 @@ const read = relativePath => {
   return str;
 };
 
+const makePaths = async globs => {
+  const pathSets = await Promise.all(globs.map(globby));
+  return R.flatten(pathSets.map(s => s.sort()));
+};
+
 const generateDocs = async ({ paths: globs, output }) => {
-  const paths = await globby(globs);
+  const paths = await makePaths(globs);
   const comments = R.pipe(
     R.always(paths),
     R.map(R.ifElse(R.test(/\.md$/), read, R.compose(extractComments, read))),

@@ -1,13 +1,11 @@
 {
   "name": "generate-docs",
-  "version": "1.0.1",
+  "version": "1.1.1",
   "author": "Andrew J. Monks <a@monks.co>",
   "repository": "amonks/generate-docs",
   "homepage": "https://github.com/amonks/generate-docs",
   "license": "ISC",
-  "files": [
-    "lib"
-  ],
+  "files": ["lib"],
   "scripts": {
     "build": "babel src -d lib"
   },
