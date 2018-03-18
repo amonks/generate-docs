@@ -9,21 +9,49 @@ example:
 ```javascript
 // docs.js
 
-const generateDocs = require('generate-docs').default
+const generateDocs = require("generate-docs").default;
 
 generateDocs({
-  paths: ['index.js'],
-  output: 'README.md'
-})
+  paths: ["readme.src.md", "*.js"],
+  output: "README.md"
+});
+```
+
+```markdown
+<!-- readme.src.md -->
+
+# My Cool Project
+
+## API
+
+<!-- TOC -->
 ```
 
 ```javascript
 // index.js
 
 /**
- * # add
+ * ## add
  * add(1, 2) // => 3
  */
 
-const add = (a, b) => a + b
+const add = (a, b) => a + b;
+```
+
+```markdown
+<!-- README.md -->
+
+# My Cool Project
+
+## API
+
+<!-- toc -->
+
+* [add](#add)
+
+<!-- tocstop -->
+
+## add
+
+add(1, 2) // => 3
 ```
